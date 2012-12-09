@@ -1,0 +1,17 @@
+{
+    "name": "cetera",
+    "description": "effortlessness, et al.",
+    "version": "0.0.0",
+    "author": "nomilous <nomilous@gmail.com",
+    "contributors": [
+        { "name": "nomilous", "email": "nomilous@gmail.com" }
+    ],
+    "dependencies": {
+        "et": "*"
+    },
+    "repository": "git@github.com:nomilous/cetera.git",
+    "main": "./lib/cetera",
+    "bin": {},
+    "scripts": {},
+    "engines": { "node": "*" }
+}
