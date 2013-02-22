@@ -1,4 +1,4 @@
 cetera
 ======
 
-effortlessness, clientside <i>et al.</i>
+effortlessness, clientside

@@ -1,0 +1,14 @@
+#!/usr/bin/env coffee
+
+Cetera = require('nez').link 'Cetera'
+
+Cetera
+
+    class: 'Framework'
+
+    category: 'Clientside'
+
+    description: 'Effortlessness. Clientside.', (feature) -> 
+
+        feature.link 'spec/features'
+
