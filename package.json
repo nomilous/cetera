@@ -1,17 +1,24 @@
 {
-    "name": "cetera",
-    "description": "effortlessness, et al.",
-    "version": "0.0.0",
-    "author": "nomilous <nomilous@gmail.com",
-    "contributors": [
-        { "name": "nomilous", "email": "nomilous@gmail.com" }
-    ],
-    "dependencies": {
-        "et": "*"
-    },
-    "repository": "git@github.com:nomilous/cetera.git",
-    "main": "./lib/cetera",
-    "bin": {},
-    "scripts": {},
-    "engines": { "node": "*" }
+  "name": "cetera",
+  "description": "effortlessness, requirejs, package, modules",
+  "version": "0.0.1",
+  "author": "nomilous <nomilous@gmail.com",
+  "contributors": [
+    {
+      "name": "nomilous",
+      "email": "nomilous@gmail.com"
+    }
+  ],
+  "dependencies": {},
+  "repository": "git@github.com:nomilous/cetera.git",
+  "main": "./lib/cetera",
+  "bin": {},
+  "scripts": {},
+  "engines": {
+    "node": "*"
+  },
+  "devDependencies": {
+    "nez": "0.0.7",
+    "should": "~1.2.2"
+  }
 }

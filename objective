@@ -1,14 +1,11 @@
 #!/usr/bin/env coffee
 
-Cetera = require('nez').link 'Cetera'
+require('nez').objective 'cetera',
 
-Cetera
+    category: 'Web Application Tools'
 
-    class: 'Framework'
+    description: """
 
-    category: 'Clientside'
+    effortlessness, clientside, requirejs, package, modules
 
-    description: 'Effortlessness. Clientside.', (feature) -> 
-
-        feature.link 'spec/features'
-
+    """, (requirements) ->
