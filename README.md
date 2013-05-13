@@ -3,7 +3,7 @@ cetera
 
 effortlessness, clientside, requirejs, package, modules
 
-### version 0.0.1 (high alpha)
+### version 0.0.2 (high alpha)
 
 
 usage
@@ -11,12 +11,12 @@ usage
 
 ```coffee
 
-Package = require('cetera').Package
-package = new Package
+Packager = require('cetera').Packager
+packager = new Packager
 
 app = express()
 
-package.mount
+packager.mount
 
     #
     # config.app as express app instance

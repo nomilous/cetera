@@ -1,7 +1,7 @@
 {
   "name": "cetera",
-  "description": "effortlessness, requirejs, package, modules",
-  "version": "0.0.1",
+  "description": "effortlessness, requirejs, packager, modules",
+  "version": "0.0.2",
   "author": "nomilous <nomilous@gmail.com",
   "contributors": [
     {

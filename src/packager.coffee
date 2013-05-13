@@ -1,6 +1,6 @@
 Development = require './cache/development_cache'
 
-module.exports = class Package
+module.exports = class Packager
 
     mount: (conf = {}) ->
 

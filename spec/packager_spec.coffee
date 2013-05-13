@@ -1,11 +1,11 @@
-require('nez').realize 'Package', (Package, test, context, DevelopmentCache) -> 
+require('nez').realize 'Packager', (Packager, test, context, DevelopmentCache) -> 
 
     context 'mount()', (it) ->
 
         it 'requires conf.app as connect based app instance', (done) ->
 
             try
-                (new Package).mount()
+                (new Packager).mount()
             catch error
                 error.should.match /requires conf.app as express app instance/
                 test done
@@ -13,7 +13,7 @@ require('nez').realize 'Package', (Package, test, context, DevelopmentCache) ->
         it 'requires a conf.name as package name', (done) -> 
 
             try
-                (new Package).mount app: get: ->
+                (new Packager).mount app: get: ->
             catch error
                 error.should.match /requires conf.name as package name/
                 test done
@@ -21,7 +21,7 @@ require('nez').realize 'Package', (Package, test, context, DevelopmentCache) ->
         it 'requires conf.src as path to package scripts', (done) -> 
 
             try
-                (new Package).mount
+                (new Packager).mount
                     app: get: ->
                     name: 'PACKAGENAME'
             catch error
@@ -32,7 +32,7 @@ require('nez').realize 'Package', (Package, test, context, DevelopmentCache) ->
 
             DevelopmentCache.prototype.route = -> test done
 
-            (new Package).mount
+            (new Packager).mount
                 src: __dirname + '../lib'
                 name: 'PACKAGENAME'
                 scripts: [

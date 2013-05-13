@@ -1,6 +1,6 @@
-require('nez').realize 'Cetera', (Cetera, test, it, Package) -> 
+require('nez').realize 'Cetera', (Cetera, test, it, Packager) -> 
 
-    it 'exports package', (done) ->
+    it 'exports Packager', (done) ->
 
-        Cetera.package.should.equal Package
+        Cetera.Packager.should.equal Packager
         test done
