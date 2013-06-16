@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "repos": [
+    {
+      "root": true,
+      "workDir": ".",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/cetera.git",
+      "HEAD": "refs/heads/master",
+      "version": "ROOT_REPO_REF"
+    },
+    {
+      "root": false,
+      "workDir": "./node_modules/nez",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/nez.git",
+      "HEAD": "refs/heads/develop",
+      "version": "0b2796999d468baa951d277c5519ed1380d9b038"
+    },
+    {
+      "root": false,
+      "workDir": "./node_modules/nez/node_modules/notice",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/notice.git",
+      "HEAD": "refs/heads/develop",
+      "version": "7110bfb10e6315e6896140ebfb938f746e09dbf4"
+    }
+  ]
+}
