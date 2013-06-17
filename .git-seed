@@ -15,15 +15,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/nez.git",
       "HEAD": "refs/heads/develop",
-      "version": "36f57d89742de911b6c9d8723c51902210b56f6e"
-    },
-    {
-      "root": false,
-      "workDir": "./node_modules/nez/node_modules/also",
-      "packageManager": "npm",
-      "remote.origin.url": "git@github.com:nomilous/also.git",
-      "HEAD": "refs/heads/develop",
-      "version": "936820e06c286417495b5461e7b282cfcc8d68a0"
+      "version": "40057fde9519595f1199ab27dbad826f874391a5"
     },
     {
       "root": false,
@@ -31,7 +23,15 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/eo.git",
       "HEAD": "refs/heads/develop",
-      "version": "4e153ab7db5bed556463effec3956df91b8dcbf0"
+      "version": "37e3b6f23997aaa5a3d8f01119e3b7cb6f22eb38"
+    },
+    {
+      "root": false,
+      "workDir": "./node_modules/nez/node_modules/eo/node_modules/also",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/also.git",
+      "HEAD": "refs/heads/develop",
+      "version": "0e73d7dc810c9e5a182d705aa1f8533d0b340723"
     },
     {
       "root": false,
