@@ -18,4 +18,13 @@ require('nez').objective 'cetera',
         console.log msg.content 
         next()
 
+    error: (error) -> 
+
+        console.log 'ERROR!!', error.stack
+
     (requirements) ->
+
+        setInterval( 
+            -> console.log 'run'
+            1000
+        )
