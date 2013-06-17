@@ -15,7 +15,15 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/nez.git",
       "HEAD": "refs/heads/develop",
-      "version": "15f44a1e52296f2e1ba68606a18d57a2abbc9640"
+      "version": "36f57d89742de911b6c9d8723c51902210b56f6e"
+    },
+    {
+      "root": false,
+      "workDir": "./node_modules/nez/node_modules/also",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/also.git",
+      "HEAD": "refs/heads/develop",
+      "version": "936820e06c286417495b5461e7b282cfcc8d68a0"
     },
     {
       "root": false,

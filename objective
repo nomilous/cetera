@@ -8,4 +8,9 @@ require('nez').objective 'cetera',
 
     effortlessness, clientside, requirejs, package, modules
 
-    """, (requirements) ->
+    """
+
+    beforeAll:  -> console.log 'beforeAll:',  arguments
+    beforeEach: -> console.log 'beforeEach:', arguments
+
+    (requirements) ->
