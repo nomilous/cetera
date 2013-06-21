@@ -15,7 +15,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/nez.git",
       "HEAD": "refs/heads/develop",
-      "version": "52f065d9c21f4d1623fd3066b71ef6aa3bb76205"
+      "version": "5c789b0dce13897ad3fb7f8c821db1a60522ddb2"
     },
     {
       "root": false,
@@ -23,7 +23,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/eo.git",
       "HEAD": "refs/heads/develop",
-      "version": "06a03fbdd6b58129539ef9142484b0df29b34c49"
+      "version": "d448508bbf1a097bf71449b05bcfb09e7b8b3c22"
     },
     {
       "root": false,
@@ -39,7 +39,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/nezcore.git",
       "HEAD": "refs/heads/develop",
-      "version": "ccf397ea202f0928b087288495fad1f8ac5f77aa"
+      "version": "04ad7246bdf172c73207a673a2fb8dc27e9e0015"
     },
     {
       "root": false,
