@@ -13,18 +13,14 @@ require('nez').objective 'cetera',
     # beforeAll:  -> console.log 'beforeAll:',  arguments
     # beforeEach: -> console.log 'beforeEach:', arguments
 
-    messenger: (msg, next) -> 
+    # messenger: (msg, next) -> 
 
-        console.log msg.content 
-        next()
+    #     console.log msg.content 
+    #     next()
 
-    error: (error) -> 
+    # error: (error) -> 
 
-        console.log 'ERROR!!', error.stack
+    #     console.log 'ERROR!!', error.stack
 
     (requirements) ->
 
-        setInterval( 
-            -> console.log 'run'
-            1000
-        )
