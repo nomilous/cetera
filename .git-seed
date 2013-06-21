@@ -23,7 +23,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/eo.git",
       "HEAD": "refs/heads/develop",
-      "version": "d2b8a0bb6c37d123b22b0d5b7e43922762536c48"
+      "version": "65e6d229d4b912e3b3967712a6448186dd90663f"
     },
     {
       "root": false,
@@ -39,7 +39,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/nezcore.git",
       "HEAD": "refs/heads/develop",
-      "version": "83f8cd76ec731d8af501489d4175e0190fe371b0"
+      "version": "ccf397ea202f0928b087288495fad1f8ac5f77aa"
     },
     {
       "root": false,
