@@ -17,6 +17,10 @@ require('nez').objective 'cetera',
 
 
 
+    module: start: (context, notifier, fn) -> console.log '\n', fn.toString()
+
+
+
     # beforeAll:  -> console.log 'beforeAll:',  arguments
     # beforeEach: -> console.log 'beforeEach:', arguments
 
@@ -28,4 +32,6 @@ require('nez').objective 'cetera',
     #     console.log 'ERROR!!', error.stack
 
     (requirements) ->
+
+        'moo'
 
