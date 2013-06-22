@@ -28,7 +28,7 @@ module.exports = class Packager
             cache = new Development
             cache.route conf
 
-        else 
+        else
 
             cache = new Development
             cache.route conf
