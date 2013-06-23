@@ -11,11 +11,11 @@ require('nez').objective 'cetera',
     """
 
     #
-    secret: '∫'
-    address: 'localhost'
-    port:     10001
-    cert:     './cert/develop-cert.pem'
-    key:      './cert/develop-key.pem'
+    # secret: '∫'
+    # address: 'localhost'
+    # port:     10001
+    # cert:     './cert/develop-cert.pem'
+    # key:      './cert/develop-key.pem'
     #module: start: (context, notifier, fn) -> console.log '\n', fn.toString()
     #
 

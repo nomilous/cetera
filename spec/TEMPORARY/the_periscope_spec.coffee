@@ -4,56 +4,47 @@
         # ==============
         #
 
-require('nez').realize "how're things topside?", 
-
-    secret: '∫'
-    
-    uplink: 
-        transport: 'https'
-        address: 'localhost'
-        port: 10001
-
-    (it, tests, ThePeriscope, should) ->
+require('nez').realize "how're things topside?", (it, tests, ThePeriscope, should) -> 
 
 
-        it 'can sneak a peek', (ok) -> 
+    it 'can sneak a peek', (ok) -> 
 
 
-            periscope = new ThePeriscope()
+        periscope = new ThePeriscope()
 
 
-            #
-            # 1. Create expectations
-            #
+        #
+        # 1. Create expectations
+        #
 
-            periscope.must receive
+        periscope.must receive
 
-                riseToTheSurface: (distance) ->
+            riseToTheSurface: (distance) ->
 
-                    distance.should.be.an.instanceof Number
-                    return true
+                distance.should.be.an.instanceof Number
+                return true
 
-                openTheEye: ->  
+            openTheEye: ->  
 
-                    return true
-
-
-            #
-            # 2. Perform action that should meet the expectations
-            #
-
-            periscope.peekTopside()
+                return true
 
 
-            #
-            # 3. Evaluate extent of success
-            #
+        #
+        # 2. Perform action that should meet the expectations
+        #
 
-            tests ok
+        periscope.peekTopside()
 
 
-            #
-            # 4. Watch this very beautiful video 
-            # 
-            #    http://vimeo.com/68238929
-            # 
+        #
+        # 3. Evaluate extent of success
+        #
+
+        tests ok
+
+
+        #
+        # 4. Watch this very beautiful video 
+        # 
+        #    http://vimeo.com/68238929
+        # 
