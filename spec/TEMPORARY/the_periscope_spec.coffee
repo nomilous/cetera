@@ -4,10 +4,10 @@
         # ==============
         #
 
-require('nez').realize "how're things topside?", (it, tests, ThePeriscope, should) -> 
+require('nez').realize 'submarine test', (can, test, ThePeriscope, should) -> 
 
 
-    it 'can sneak a peek', (ok) -> 
+    can 'peek topside', (done) -> 
 
 
         periscope = new ThePeriscope()
@@ -40,7 +40,7 @@ require('nez').realize "how're things topside?", (it, tests, ThePeriscope, shoul
         # 3. Evaluate extent of success
         #
 
-        tests ok
+        test done
 
 
         #
