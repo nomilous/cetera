@@ -6,7 +6,11 @@
 
 require('nez').realize "how're things topside?", 
     
-    uplink: port: 10001
+    uplink: 
+    
+        transport: 'https'
+        address: 'localhost'
+        port: 10001
 
     (it, tests, ThePeriscope, should) ->
 
