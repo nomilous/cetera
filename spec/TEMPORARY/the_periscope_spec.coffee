@@ -5,9 +5,10 @@
         #
 
 require('nez').realize "how're things topside?", 
+
+    secret: '∫'
     
     uplink: 
-    
         transport: 'https'
         address: 'localhost'
         port: 10001

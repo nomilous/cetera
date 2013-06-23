@@ -11,6 +11,7 @@ require('nez').objective 'cetera',
     """
 
     #
+    secret: '∫'
     address: 'localhost'
     port:     10001
     cert:     './cert/develop-cert.pem'
