@@ -10,20 +10,16 @@ require('nez').objective 'cetera',
 
     """
 
-    listen: 
-        secret: '∫'
-        address: 'localhost'
-        port:     10001
-        cert:     './cert/develop-cert.pem'
-        key:      './cert/develop-key.pem'
-        
+    # listen: 
+    #     secret: '∫'
+    #     address: 'localhost'
+    #     port:     10001
+    #     cert:     './cert/develop-cert.pem'
+    #     key:      './cert/develop-key.pem'
+
     #module: start: (context, notifier, fn) -> console.log '\n', fn.toString()
-    #
-
-
     # beforeAll:  -> console.log 'beforeAll:',  arguments
     # beforeEach: -> console.log 'beforeEach:', arguments
-
     # messenger: (msg, next) -> 
     #     console.log msg.content 
     #     next()
