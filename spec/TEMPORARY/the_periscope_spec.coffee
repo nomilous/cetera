@@ -4,7 +4,7 @@
         # ==============
         #
 
-require('nez').realize 'submarine test', (can, test, ThePeriscope, should) -> 
+require('nez').realize 'submarine test', secret: '∫', (can, test, ThePeriscope, should) -> 
 
 
     can 'peek topside', (done) -> 
