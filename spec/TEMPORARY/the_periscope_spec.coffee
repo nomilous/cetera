@@ -1,11 +1,10 @@
-        
+
         #
         # SUBMARINE TEST
         # ==============
         #
 
 require('nez').realize 'submarine test', (can, test, ThePeriscope, should) -> 
-
 
     can 'peek topside', (done) -> 
 
@@ -48,3 +47,9 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
         # 
         #    http://vimeo.com/68238929
         # 
+
+
+
+
+
+
