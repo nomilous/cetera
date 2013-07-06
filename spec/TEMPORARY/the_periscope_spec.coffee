@@ -8,6 +8,8 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
 
     can 'peek topside', (done) -> 
 
+        console.log done.stack
+
 
         # periscope = new ThePeriscope() 
 

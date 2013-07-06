@@ -47,7 +47,15 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/ipso.git",
       "HEAD": "refs/heads/develop",
-      "version": "e87d068b7eb7b671ddaa5d41fa7124005af6de70"
+      "version": "c216e14d0d5377807ec787a6bae368db6673c97b"
+    },
+    {
+      "root": false,
+      "workDir": "./node_modules/nez/node_modules/ipso/node_modules/also",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/also.git",
+      "HEAD": "refs/heads/develop",
+      "version": "6441044084922761166159599fd8ebc2cdd3fa37"
     },
     {
       "root": false,
