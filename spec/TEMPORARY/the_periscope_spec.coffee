@@ -9,30 +9,30 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
     can 'peek topside', (done) -> 
 
 
-        periscope = new ThePeriscope() 
+        # periscope = new ThePeriscope() 
 
 
-        #
-        # 1. Create expectations
-        #
+        # #
+        # # 1. Create expectations
+        # #
 
-        periscope.must receive
+        # periscope.must receive
 
-            riseToTheSurface: (distance) ->
+        #     riseToTheSurface: (distance) ->
 
-                distance.should.be.an.instanceof Number
-                return true
+        #         distance.should.be.an.instanceof Number
+        #         return true
 
-            openTheEye: ->  
+        #     openTheEye: ->  
 
-                return true
+        #         return true
 
 
-        #
-        # 2. Perform action that should meet the expectations
-        #
+        # #
+        # # 2. Perform action that should meet the expectations
+        # #
 
-        periscope.peekTopside()
+        # periscope.peekTopside()
 
 
         #
@@ -47,9 +47,4 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
         # 
         #    http://vimeo.com/68238929
         # 
-
-
-
-
-
 
