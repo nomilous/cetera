@@ -21,9 +21,17 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
 
         And 'even deeper', (to) -> 
 
-            to 'any depth', (done) ->
+            to 'any depth', (okgood) ->
 
-                test done
+                setTimeout (-> 
+
+                    #
+                    # verify flow control
+                    # 
+
+                    test okgood
+
+                ), 1000
 
 
     can 'peek topside', (done) -> 
@@ -58,7 +66,15 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
         # 3. Evaluate extent of success
         #
 
-        test done
+        setTimeout (-> 
+
+            #
+            # verify flow control
+            # 
+
+            test done
+
+        ), 1000
 
 
         #
@@ -66,4 +82,7 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
         # 
         #    http://vimeo.com/68238929
         # 
+
+
+
 
