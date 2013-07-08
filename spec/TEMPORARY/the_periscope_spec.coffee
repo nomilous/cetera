@@ -6,10 +6,27 @@
 
 require('nez').realize 'submarine test', (can, test, ThePeriscope, should) -> 
 
+    # before.all (done) -> 
+
+    #     console.log 'before all'
+    #     done()
+
+    # before.each (done) -> 
+
+    #     console.log 'before each'
+    #     done()
+
+
+    can 'go deeper', (And) -> 
+
+        And 'even deeper', (to) -> 
+
+            to 'any depth', (done) ->
+
+                test done
+
+
     can 'peek topside', (done) -> 
-
-        console.log done.stack
-
 
         # periscope = new ThePeriscope() 
 
