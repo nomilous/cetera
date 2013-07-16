@@ -15,7 +15,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/nez.git",
       "HEAD": "refs/heads/develop",
-      "version": "3ed3d518975f52a05ca10c89a58c391c00bda7c6"
+      "version": "9e0427564a72f177ea6e18fc92b848e18af66584"
     },
     {
       "root": false,
@@ -47,7 +47,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/ipso.git",
       "HEAD": "refs/heads/develop",
-      "version": "c823f2e49fe87512b716650f0aac4e5faa61cf8f"
+      "version": "1966af9864ae6244609b120606566870a1edf134"
     },
     {
       "root": false,
@@ -55,7 +55,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/also.git",
       "HEAD": "refs/heads/develop",
-      "version": "79f9070e56694aa7de38305b179e5d7739c711d9"
+      "version": "3fc16c078c99abc01a6f428fd185e73d5a5e83b4"
     },
     {
       "root": false,
