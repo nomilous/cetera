@@ -30,7 +30,7 @@ require('nez').realize 'submarine test',
 
         can 'run tests in sequence', (done) -> 
 
-            done()
+            test done
 
         can 'run nested hooks',
 
@@ -41,11 +41,11 @@ require('nez').realize 'submarine test',
 
             (done) -> 
 
-                done()
+                test done
 
         can 'peek topside', (done) -> 
 
-            done()
+            test done
 
             #periscope = new ThePeriscope() 
 
