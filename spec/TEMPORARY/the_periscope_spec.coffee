@@ -30,22 +30,33 @@ require('nez').realize 'submarine test',
 
         can 'run tests in sequence', (done) -> 
 
-            test done
+            setTimeout (-> test done), 200
 
-        can 'run nested hooks',
+        can 'run hooks on phrases',
 
             beforeEach: (done) -> 
 
                 console.log 'nested before each'
                 done()
 
-            (done) -> 
+            afterAll: (done) -> 
 
-                test done
+                console.log 'nested after all'
+                done()
+
+            (that) -> 
+
+                that 'are nested 1', (done) ->
+
+                    setTimeout (-> test done), 200
+
+                that 'are nested 2', (done) ->
+
+                    setTimeout (-> test done), 200
+
+        #can 'timeout on missing done()', (done) -> 
 
         can 'peek topside', (done) -> 
-
-            test done
 
             #periscope = new ThePeriscope() 
 
@@ -77,15 +88,15 @@ require('nez').realize 'submarine test',
             # 3. Evaluate extent of success
             #
 
-            # setTimeout (-> 
+            setTimeout (-> 
 
-            #     #
-            #     # verify flow control
-            #     # 
+                #
+                # verify flow control
+                # 
 
-            #     test done
+                test done
 
-            # ), 1000
+            ), 200
 
 
             #
