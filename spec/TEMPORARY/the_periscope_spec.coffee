@@ -8,29 +8,44 @@ require('nez').realize 'submarine test',
 
     beforeAll: (done) -> 
 
-        console.log 'BEFORE ALL'
+        console.log 'before ALL'
         done()
 
     beforeEach: (done) -> 
 
-        console.log 'BEFORE EACH'
+        console.log 'before EACH'
         done()
 
     afterEach: (done) -> 
 
-        console.log 'AFTER EACH'
+        console.log 'after EACH'
         done()
 
     afterAll: (done) -> 
 
-        console.log 'AFTER ALL'
+        console.log 'after ALL'
         done()
 
     (can, test, ThePeriscope, should) -> 
 
         can 'run tests in sequence', (done) -> 
-    
+
+            done()
+
+        can 'run nested hooks',
+
+            beforeEach: (done) -> 
+
+                console.log 'nested before each'
+                done()
+
+            (done) -> 
+
+                done()
+
         can 'peek topside', (done) -> 
+
+            done()
 
             #periscope = new ThePeriscope() 
 
