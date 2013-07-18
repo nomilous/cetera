@@ -54,7 +54,7 @@ require('nez').realize 'submarine test',
 
                     setTimeout (-> test done), 200
 
-        #can 'timeout on missing done()', (done) -> 
+        can 'timeout on missing done()', (done) -> 
 
         can 'peek topside', (done) -> 
 
@@ -104,4 +104,5 @@ require('nez').realize 'submarine test',
             # 
             #    http://vimeo.com/68238929
             # 
+
 
