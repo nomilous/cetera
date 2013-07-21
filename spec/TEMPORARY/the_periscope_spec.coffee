@@ -1,8 +1,4 @@
-
-        #
-        # SUBMARINE TEST
-        # ==============
-        #
+### UUID 97c77fa0-f222-11e2-a21d-cde7396cabc2 ###
 
 require('nez').realize 'submarine test', 
 

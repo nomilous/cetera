@@ -1,3 +1,5 @@
+### UUID 9f27c610-f222-11e2-a21d-cde7396cabc2 ###
+
 require('nez').realize 'Packager', (Packager, test, context, DevelopmentCache) -> 
 
     context 'mount()', (it) ->
