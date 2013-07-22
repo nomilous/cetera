@@ -67,14 +67,6 @@
     },
     {
       "root": false,
-      "workDir": "./node_modules/nez/node_modules/ipso/node_modules/does",
-      "packageManager": "npm",
-      "remote.origin.url": "git@github.com:nomilous/does.git",
-      "HEAD": "refs/heads/master",
-      "version": "9dbe9748047285d7b5c086f6698ceca2891107d8"
-    },
-    {
-      "root": false,
       "workDir": "./node_modules/nez/node_modules/nezcore",
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/nezcore.git",
