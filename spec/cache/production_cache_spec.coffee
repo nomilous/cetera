@@ -7,4 +7,3 @@ require('nez').realize 'ProductionCache', (ProductionCache, test, it, should) ->
         (new ProductionCache).route.should.be.an.instanceof Function
         test done
 
-        
