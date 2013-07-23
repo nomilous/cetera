@@ -26,7 +26,7 @@ require('nez').realize 'submarine test',
 
         can 'run tests in sequence', (done) -> 
 
-            setTimeout (-> test done), 200
+            setTimeout (-> test done), 100
 
         can 'run hooks on phrases',
 
@@ -40,17 +40,25 @@ require('nez').realize 'submarine test',
                 console.log 'nested after all'
                 done()
 
+            #
+            # local timeout on subcontext to 150ms
+            #
+
+            timeout: 150
+
             (that) -> 
 
                 that 'are nested 1', (done) ->
 
-                    setTimeout (-> test done), 200
+                    setTimeout (-> test done), 100
 
                 that 'are nested 2', (done) ->
 
-                    setTimeout (-> test done), 200
+                    setTimeout (-> test done), 100
 
-        can 'timeout on missing done()', (done) -> 
+                that 'timeout if no call to done()', (done) -> 
+
+        #can 'timeout if no call to done()', (done) -> 
 
         can 'peek topside', (done) -> 
 
@@ -92,7 +100,7 @@ require('nez').realize 'submarine test',
 
                 test done
 
-            ), 200
+            ), 100
 
 
             #
@@ -100,4 +108,7 @@ require('nez').realize 'submarine test',
             # 
             #    http://vimeo.com/68238929
             # 
+
+
+
 
