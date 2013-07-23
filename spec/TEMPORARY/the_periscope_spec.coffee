@@ -58,7 +58,7 @@ require('nez').realize 'submarine test',
 
                 that 'timeout if no call to done()', (done) -> 
 
-        can 'timeout if no call to done()', (done) -> 
+        #can 'timeout if no call to done()', (done) -> 
 
         can 'peek topside', (done) -> 
 
@@ -108,4 +108,8 @@ require('nez').realize 'submarine test',
             # 
             #    http://vimeo.com/68238929
             # 
+
+
+
+
 
