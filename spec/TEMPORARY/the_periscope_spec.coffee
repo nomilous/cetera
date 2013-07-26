@@ -32,6 +32,8 @@ require('nez').realize 'submarine test',
 
             beforeEach: (done) -> 
 
+                @variable = 'value'
+
                 console.log 'nested before each'
                 done()
 
@@ -50,10 +52,13 @@ require('nez').realize 'submarine test',
 
                 that 'are nested 1', (done) ->
 
+                    console.log VARIABLE: @variable
+                    @variable = 'alternate value'
                     setTimeout (-> test done), 100
 
                 that 'are nested 2', (done) ->
 
+                    console.log VARIABLE: @variable
                     setTimeout (-> test done), 100
 
                 that 'timeout if no call to done()', (done) -> 
