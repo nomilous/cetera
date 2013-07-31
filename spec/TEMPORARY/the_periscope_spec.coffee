@@ -2,16 +2,51 @@
 
 require('nez').realize 'submarine test', (can, test, ThePeriscope, should) -> 
 
+                                                        #
+                                                        # TODO
+                                                        # ----
+                                                        # 
+                                                        # * camelcase means inject from local lib, 
+                                                        #   search for module filename the_periscope
+                                                        # 
+                                                        # * noncamel injects node_module
+                                                        #   
+
+        before each: => 
+
+            # 
+            # TODO
+            # ----
+            # 
+            # * alternative hook declaration
+            # * optional async (done)
+            # * timeout on async
+            # 
+
+            @periscope = new ThePeriscope()
+
+
+        after 
+
+            each: (done) -> 
+
+                console.log 'AFTER EACH'
+                done()
+
+            all: (done) -> 
+
+                console.log 'AFTER ALL'
+                done()
+
+
         can 'peek topside', (done) -> 
-
-            periscope = new ThePeriscope() 
-
 
             #
             # 1. Create expectations
             #
 
-            periscope.must receive
+            # @periscope.must_receive
+            @periscope.must receive
 
                 riseToTheSurface: (distance) ->
 
@@ -27,7 +62,7 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             # 2. Perform action that should meet the expectations
             #
 
-            periscope.peekTopside()
+            @periscope.peekTopside()
 
 
             #
