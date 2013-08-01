@@ -12,7 +12,7 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
                                                         # * noncamel injects node_module
                                                         #   
 
-        before each: => 
+        before each: (done) => 
 
             # 
             # TODO
@@ -23,7 +23,9 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             # * timeout on async
             # 
 
-            @periscope = new ThePeriscope()
+            #@periscope = new ThePeriscope()
+            console.log 'BEFORE EACH'
+            done()
 
 
         after 
@@ -46,23 +48,23 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             #
 
             # @periscope.must_receive
-            @periscope.must receive
+            # @periscope.must receive
 
-                riseToTheSurface: (distance) ->
+            #     riseToTheSurface: (distance) ->
 
-                    distance.should.be.an.instanceof Number
-                    return true
+            #         distance.should.be.an.instanceof Number
+            #         return true
 
-                openTheEye: ->  
+            #     openTheEye: ->  
 
-                    return true
+            #         return true
 
 
             #
             # 2. Perform action that should meet the expectations
             #
 
-            @periscope.peekTopside()
+            #@periscope.peekTopside()
 
 
             #
