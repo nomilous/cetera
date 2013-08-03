@@ -25,21 +25,15 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             console.log before_all: 1
             @periscope = {}
 
-        after all: -> console.log after_all: 1
-
-        #
-        # TODO
-        # ----
-        # 
-        # * optional async resolver on each hooks
-        # 
-
-        before each: (done) -> console.log before_each: 1; done()
-        after each: (done) -> console.log after_each: 1; done()
-
-
         
+        before each: -> console.log before_each: 1
+        after  each: -> console.log after_each: 1
+        after  all:  -> console.log after_all: 1
 
+
+        can 'repeat after eaches', (done) -> test done
+        can 'repeat after eaches', (done) -> test done
+        can 'repeat after eaches', (done) -> test done
         can 'repeat after eaches', (done) -> test done
 
         can 'peek topside', (done) -> 
