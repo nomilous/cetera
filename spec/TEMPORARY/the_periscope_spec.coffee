@@ -21,24 +21,11 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             # * alternative hook declaration
             # * optional async (done)
             # * timeout on async
+            # * make hooks not need => to stare common scope with phrases
             # 
 
-            #@periscope = new ThePeriscope()
-            console.log 'BEFORE EACH'
+            @periscope = {}
             done()
-
-
-        after 
-
-            each: (done) -> 
-
-                console.log 'AFTER EACH'
-                done()
-
-            all: (done) -> 
-
-                console.log 'AFTER ALL'
-                done()
 
 
         can 'peek topside', (done) -> 
@@ -47,7 +34,7 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             # 1. Create expectations
             #
 
-            # @periscope.must_receive
+            console.log @periscope
             # @periscope.must receive
 
             #     riseToTheSurface: (distance) ->
