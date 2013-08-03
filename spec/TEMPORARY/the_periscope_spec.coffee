@@ -12,7 +12,7 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
                                                         # * noncamel injects node_module
                                                         #   
 
-        before each: (done) => 
+        before all: => 
 
             # 
             # TODO
@@ -25,8 +25,18 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             # 
 
             @periscope = {}
-            done()
 
+        # before each: -> console.log before_each: 1
+
+
+        can 'for testing afterall', (nested) -> 
+
+            after all: -> console.log after_all: 1
+
+            nested 'nested 1', (done) -> test done
+            nested 'nested 2', (done) -> test done
+
+        
 
         can 'peek topside', (done) -> 
 
@@ -67,4 +77,5 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             # 
             #    http://vimeo.com/68238929
             # 
+
 

@@ -71,7 +71,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/nezcore.git",
       "HEAD": "refs/heads/develop",
-      "version": "0bf4289d90254380acf833ecd13f9fa438095d45"
+      "version": "dc78f2710a8e5acb1623ca27191c47bd9bc32638"
     },
     {
       "root": false,
