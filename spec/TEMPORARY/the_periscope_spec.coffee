@@ -18,43 +18,29 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             # TODO
             # ----
             # 
-            # * alternative hook declaration
-            # * optional async (done)
-            # * timeout on async
+            # * timeout on async hooks
             # * make hooks not need => to stare common scope with phrases
             # 
 
-            console.log outer_before_all: 1
+            console.log before_all: 1
             @periscope = {}
 
+        after all: -> console.log after_all: 1
 
-        # before each: -> console.log before_each: 1
+        #
+        # TODO
+        # ----
+        # 
+        # * optional async resolver on each hooks
+        # 
+
+        before each: (done) -> console.log before_each: 1; done()
+        after each: (done) -> console.log after_each: 1; done()
 
 
-        after all: -> console.log outer_after_all: 1
+        
 
-        can 'for testing nested hooks', (nested) -> 
-
-            before all: -> console.log inner_before_all: 1
-            after all: (done) -> 
-
-                console.log inner_after_all: 'start'
-
-                setTimeout (->
-
-                    console.log inner_after_all: 'finish'
-                    done()
-
-                ), 200
-
-            nested 'nested 1', (done) -> test done
-            nested 'nested 2', (done) -> test done
-
-        can 'wait for nsted after all in preceding phrase',  (done) ->
-
-            console.log BUG: 1
-
-            test done
+        can 'repeat after eaches', (done) -> test done
 
         can 'peek topside', (done) -> 
 
@@ -62,7 +48,7 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             # 1. Create expectations
             #
 
-            console.log @periscope
+            #console.log @periscope
             # @periscope.must receive
 
             #     riseToTheSurface: (distance) ->
