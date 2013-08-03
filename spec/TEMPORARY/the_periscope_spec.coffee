@@ -27,14 +27,8 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
 
         
         before each: -> console.log before_each: 1
-        after  each: -> console.log after_each: 1
-        after  all:  -> console.log after_all: 1
-
-
-        can 'repeat after eaches', (done) -> test done
-        can 'repeat after eaches', (done) -> test done
-        can 'repeat after eaches', (done) -> test done
-        can 'repeat after eaches', (done) -> test done
+        after  each:   (done) -> console.log after_each: 1; setTimeout done, 1000
+        after  all: -> console.log after_all: 1; 
 
         can 'peek topside', (done) -> 
 
