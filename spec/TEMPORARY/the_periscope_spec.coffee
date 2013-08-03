@@ -24,19 +24,37 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             # * make hooks not need => to stare common scope with phrases
             # 
 
+            console.log outer_before_all: 1
             @periscope = {}
+
 
         # before each: -> console.log before_each: 1
 
 
-        can 'for testing afterall', (nested) -> 
+        after all: -> console.log outer_after_all: 1
 
-            after all: -> console.log after_all: 1
+        can 'for testing nested hooks', (nested) -> 
+
+            before all: -> console.log inner_before_all: 1
+            after all: (done) -> 
+
+                console.log inner_after_all: 'start'
+
+                setTimeout (->
+
+                    console.log inner_after_all: 'finish'
+                    done()
+
+                ), 200
 
             nested 'nested 1', (done) -> test done
             nested 'nested 2', (done) -> test done
 
-        
+        can 'wait for nsted after all in preceding phrase',  (done) ->
+
+            console.log BUG: 1
+
+            test done
 
         can 'peek topside', (done) -> 
 
