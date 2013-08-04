@@ -71,7 +71,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/phrase.git",
       "HEAD": "refs/heads/develop",
-      "version": "c2eca60123a04fb87acd958b1dda805d5130246d"
+      "version": "1083ff705adce7ff3e5d1f546075fbe519f60fab"
     },
     {
       "root": false,
@@ -79,7 +79,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/also.git",
       "HEAD": "refs/heads/develop",
-      "version": "4f98a0018cf15a2e5af769bf4202ca2d524b5abe"
+      "version": "0e8f6e35a0d1efc8994faa09516cfa5ffbed93d7"
     },
     {
       "root": false,
