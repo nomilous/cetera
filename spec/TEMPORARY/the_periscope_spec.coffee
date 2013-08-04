@@ -20,7 +20,7 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             # 
             # * timeout on async hooks
             # 
-
+            
             @periscope = {}
             done()
 
@@ -29,7 +29,7 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
 
             #
             # 1. Create expectations
-            #
+            # 
 
             console.log @periscope
             # @periscope.must receive
