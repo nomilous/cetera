@@ -12,23 +12,18 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
                                                         # * noncamel injects node_module
                                                         #   
 
-        before all: => 
+        before each: (done) ->
 
             # 
             # TODO
             # ----
             # 
             # * timeout on async hooks
-            # * make hooks not need => to stare common scope with phrases
             # 
 
-            console.log before_all: 1
             @periscope = {}
+            done()
 
-        
-        before each: -> console.log before_each: 1
-        after  each:   (done) -> console.log after_each: 1; setTimeout done, 1000
-        after  all: -> console.log after_all: 1; 
 
         can 'peek topside', (done) -> 
 
@@ -36,7 +31,7 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             # 1. Create expectations
             #
 
-            #console.log @periscope
+            console.log @periscope
             # @periscope.must receive
 
             #     riseToTheSurface: (distance) ->
