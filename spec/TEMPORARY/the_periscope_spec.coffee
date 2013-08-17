@@ -1,6 +1,6 @@
 ### REALIZER 63e2d6b0-f242-11e2-85ef-03366e5fcf9a ###
 
-require('nez').realize 'submarine test', (can, test, ThePeriscope, should) -> 
+require('nez').realize 'submarine test', (it, ThePeriscope, should) -> 
 
                                                         #
                                                         # TODO
@@ -10,6 +10,12 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
                                                         #   search for module filename the_periscope
                                                         # 
                                                         # * noncamel injects node_module
+                                                        # 
+                                                        #      - injecting things with odd names therefore
+                                                        #        needs an alternative eg. 
+                                                        # 
+                                                        #        socket.io 
+                                                        #        node-module-with-dashes-in-name
                                                         #   
 
         before each: (done) ->
@@ -25,7 +31,7 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             done()
 
 
-        can 'peek topside', (done) -> 
+        it 'can peek topside', (done) -> 
 
             #
             # 1. Create expectations
@@ -55,7 +61,7 @@ require('nez').realize 'submarine test', (can, test, ThePeriscope, should) ->
             # 3. Evaluate extent of success
             #
 
-            test done
+            done()
 
         
 
