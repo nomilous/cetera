@@ -12,12 +12,12 @@ require('nez').objective
 
     """
 
-    # listen: 
-    #     secret: '∫'
-    #     address: 'localhost'
-    #     port:     10001
-    #     cert:     './cert/develop-cert.pem'
-    #     key:      './cert/develop-key.pem'
+    listen: 
+        secret: '∫'
+        address: 'localhost'
+        port:     10001
+        cert:     './cert/develop-cert.pem'
+        key:      './cert/develop-key.pem'
 
     (requirements) -> 
 
