@@ -1,9 +1,11 @@
 #!/usr/bin/env coffee
 
-require('nez').objective 'cetera',
+require('nez').objective
 
-    category: 'Web Application Tools'
+    title:      'cetera'
+    uuid:       'cetera-0.0.1'
 
+    category:   'Web Application Tools'
     description: """
 
     effortlessness, clientside, requirejs, package, modules
@@ -17,16 +19,5 @@ require('nez').objective 'cetera',
     #     cert:     './cert/develop-cert.pem'
     #     key:      './cert/develop-key.pem'
 
-    #module: start: (context, notifier, fn) -> console.log '\n', fn.toString()
-    # beforeAll:  -> console.log 'beforeAll:',  arguments
-    # beforeEach: -> console.log 'beforeEach:', arguments
-    # messenger: (msg, next) -> 
-    #     console.log msg.content 
-    #     next()
-
-    error: (error) -> console.log 'ERROR!!', error.stack
-
-    (requirements) ->
-
-        'moo'
+    (requirements) -> 
 
