@@ -20,16 +20,9 @@ realize: (it, ThePeriscope, should) ->
                     #   
 
     before each: (done) ->
-
-        # 
-        # TODO
-        # ----
-        # 
-        # * timeout on async hooks
-        # 
         
         @periscope = {}
-        #done()
+        done()
 
 
     it 'can peek topside', (done) -> 
