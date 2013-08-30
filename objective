@@ -19,6 +19,3 @@ require('nez').objective
         cert:     './cert/develop-cert.pem'
         key:      './cert/develop-key.pem'
 
-
-    controller: 'π'
-
