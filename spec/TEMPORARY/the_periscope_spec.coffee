@@ -29,7 +29,7 @@ realize: (it, ThePeriscope, should) ->
         # 
         
         @periscope = {}
-        done()
+        #done()
 
 
     it 'can peek topside', (done) -> 
