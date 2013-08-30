@@ -1,7 +1,10 @@
 title: 'submarine test'
 uuid:  '63e2d6b0-f242-11e2-85ef-03366e5fcf9a'
 
-realize: (it, ThePeriscope, should) -> 
+
+realize: (it) -> #, ThePeriscope, should ) -> 
+
+    require 'should'
 
                     #
                     # TODO
@@ -24,14 +27,23 @@ realize: (it, ThePeriscope, should) ->
         @periscope = {}
         done()
 
-
     it 'can peek topside', (done) -> 
+
+
 
         #
         # 1. Create expectations
         # 
 
-        @periscope.value = 1
+        @periscope.should.eql fails: 'this'
+
+                    #
+                    # throws [AssertionError]
+                    # 
+                    # TODO: fix 'it still waited for timeout' 
+                    #
+
+
         # console.log @periscope
         # @periscope.must receive
 
