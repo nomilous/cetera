@@ -11,6 +11,8 @@ uuid:  '63e2d6b0-f242-11e2-85ef-03366e5fcf9a'
 
 realize: (it) -> #, ThePeriscope, should ) -> 
 
+    console.log "walking --> the_periscope_spec.coffee"
+
     require 'should'
 
                     #
