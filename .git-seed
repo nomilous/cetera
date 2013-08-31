@@ -15,7 +15,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/nez.git",
       "HEAD": "refs/heads/develop",
-      "version": "ea448a6f42a8000c206c80b398aa39fcd389e34a"
+      "version": "5bebeb2cd3e8549770a33e5d78e06757337f26b7"
     },
     {
       "root": false,
@@ -31,7 +31,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/phrase.git",
       "HEAD": "refs/heads/develop",
-      "version": "e13002716462f7d0a2fa94256c242bf26ac720e6"
+      "version": "f28f0ba18c0ef0b591b1f8cba059dc771b894372"
     }
   ]
 }
