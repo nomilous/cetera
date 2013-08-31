@@ -19,3 +19,10 @@ require('nez').objective
         cert:     './cert/develop-cert.pem'
         key:      './cert/develop-key.pem'
 
+
+    #
+    # TEMPORAY: override to only link opbjective into ./spec/TEMPORARY
+    #
+
+    (spec) -> spec.link directory: './spec/TEMPORARY'
+
