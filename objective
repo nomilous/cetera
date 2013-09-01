@@ -24,8 +24,14 @@ require('nez').objective
     # TEMPORAY: override to only link opbjective into ./spec/TEMPORARY
     #
 
-    (spec) -> 
+    (story) -> 
 
-        spec.link directory: './spec/TEMPORARY'
-        spec.link directory: './spec/TEMPORARY2'
+        console.log 'walking objective links'
+
+        console.log story
+
+
+        story.link directory: './stories/TEMPORARY'
+        # spec.link directory: './spec/TEMPORARY'
+        # spec.link directory: './spec/TEMPORARY2'
 
