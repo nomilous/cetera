@@ -26,11 +26,6 @@ require('nez').objective
 
     (story) -> 
 
-        console.log 'walking objective links'
-
-        console.log story
-
-
         story.link directory: './stories/TEMPORARY'
         # spec.link directory: './spec/TEMPORARY'
         # spec.link directory: './spec/TEMPORARY2'

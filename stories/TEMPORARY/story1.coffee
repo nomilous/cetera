@@ -21,8 +21,8 @@ realize: (requirement) ->
             need 'A Feature', (spec) -> 
 
                 #
-                # link to all specs that would determine the
-                # functionality of this feature
+                # link to all specs that determine the
+                # functingnality of this feature
                 #
                 spec.link directory: './spec/TEMPORARY'
 
