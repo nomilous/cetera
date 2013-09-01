@@ -11,11 +11,13 @@ uuid:  '63e2d6b0-f242-11e2-85ef-03366e5fcf9a'
 
 realize: (it, ThePeriscope, should ) -> 
 
+    require 'should'
+
     console.log WALK: 'periscope'
 
     before each: (done) ->
         
-        @periscope = new ThePeriscope
+        @periscope = periscope: {} # new ThePeriscope
         done()
 
     it 'can peek topside', (done) -> 
@@ -26,7 +28,7 @@ realize: (it, ThePeriscope, should ) ->
         # 1. Create expectations
         # 
 
-        @periscope.should.eql fails: 'this'
+        @periscope.should.eql telescope: 'microscope'
 
                     #
                     # throws [AssertionError]

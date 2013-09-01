@@ -3,6 +3,6 @@ uuid:  '0003'
 
 realize: (nest) ->
 
-    walking 'THREE'
+    console.log WALK: 'THREE'
 
     nest 'phrase', (done) -> done()
