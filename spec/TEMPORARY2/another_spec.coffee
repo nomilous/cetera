@@ -14,11 +14,7 @@ realize: (context) ->
         console.log @
         done()
 
-    console.log """
-
-        TODO: only the first boundry was walked
-
-    """
+    console.log WALK: 'another spec'
     
     context 'these take longer to timeout', timeout: 1000, (it) -> 
 
