@@ -13,21 +13,16 @@ realize: (it) -> #, ThePeriscope, should ) ->
 
     console.log "walking --> the_periscope_spec.coffee"
 
-    setTimeout (->
 
-        #
-        # TODO: fix 'possible issue with flow control...'
-        #
+    it 'has deeper phrases', (that) -> 
 
-        it 'has deeper phrases', (that) -> 
+        console.log "walking --> deeper"
 
-            console.log "walking --> deeper"
+        that 'confirms the recursor has spanned the boundry', (end) -> 
 
-            that 'confirms the recursor has spanned the boundry', (end) -> 
+            end()
 
-                end()
 
-    ), 1900
 
     require 'should'
 
