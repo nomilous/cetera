@@ -26,6 +26,7 @@ require('nez').objective
 
     (spec) -> 
 
-        #spec.link directory: './spec/TEMPORARY'
-        spec.link directory: './spec/TEMPORARY2'
+        spec.link directory: './spec/TEMPORARY'
+        console.log TODO: 'resolver array in linker to support multiple links'
+        # spec.link directory: './spec/TEMPORARY2'
 

@@ -11,27 +11,9 @@ uuid:  '63e2d6b0-f242-11e2-85ef-03366e5fcf9a'
 
 realize: (it, ThePeriscope, should ) -> 
 
-    require 'should'
-
-                    #
-                    # TODO
-                    # ----
-                    # 
-                    # * camelcase means inject from local lib, 
-                    #   search for module filename the_periscope
-                    # 
-                    # * noncamel injects node_module
-                    # 
-                    #      - injecting things with odd names therefore
-                    #        needs an alternative eg. 
-                    # 
-                    #        socket.io 
-                    #        node-module-with-dashes-in-name
-                    #   
-
     before each: (done) ->
         
-        @periscope = {}
+        @periscope = new ThePeriscope
         done()
 
     it 'can peek topside', (done) -> 
