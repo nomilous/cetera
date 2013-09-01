@@ -13,6 +13,14 @@ realize: (it) -> #, ThePeriscope, should ) ->
 
     console.log "walking --> the_periscope_spec.coffee"
 
+    it 'has deeper phrases', (that) -> 
+
+        console.log "walking --> deeper"
+
+        that 'confirms the recursor has spanned the boundry', (end) -> 
+
+            end()
+
     require 'should'
 
                     #

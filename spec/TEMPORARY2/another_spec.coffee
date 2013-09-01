@@ -6,6 +6,12 @@ realize: (context) ->
 
     # console.log "walking --> #{__filename}"
     console.log "walking --> another_spec.coffee"
+
+    console.log """
+
+        TODO: only the first boundry was walked
+
+    """
     
 
     context 'context A', (it) -> 
