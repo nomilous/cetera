@@ -3,6 +3,16 @@ uuid:  'fry day, satay day, run day'
 
 realize: (requirement) -> 
 
+    before each: (done) -> 
+
+        @before_each_REQUIREMENT = 1
+        done()
+
+    after all: (done) -> 
+
+        @after_all_REQUIREMENT = 1
+        done()
+
     console.log 'walking story'
 
     #

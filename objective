@@ -26,6 +26,11 @@ require('nez').objective
 
     (story) -> 
 
+        before each: (done) -> 
+
+            @before_each_ON_THE_OBJECTIVE = 1
+            done()
+
         story.link directory: './stories/TEMPORARY'
         # spec.link directory: './spec/TEMPORARY'
         # spec.link directory: './spec/TEMPORARY2'

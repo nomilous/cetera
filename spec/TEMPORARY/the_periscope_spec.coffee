@@ -13,6 +13,11 @@ realize: (it) -> #, ThePeriscope, should ) ->
 
     console.log "walking --> the_periscope_spec.coffee"
 
+    before each: (done) -> 
+
+        @created_on_realizer = 1
+        done()
+
 
     it 'has deeper phrases', (that) -> 
 
@@ -20,6 +25,7 @@ realize: (it) -> #, ThePeriscope, should ) ->
 
         that 'confirms the recursor has spanned the boundry', (end) -> 
 
+            @confirmed = 1
             end()
 
 
