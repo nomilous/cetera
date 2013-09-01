@@ -24,14 +24,8 @@ require('nez').objective
     # TEMPORAY: override to only link opbjective into ./spec/TEMPORARY
     #
 
-    (story) -> 
+    (spec) -> 
 
-        before each: (done) -> 
-
-            @before_each_ON_THE_OBJECTIVE = 1
-            done()
-
-        story.link directory: './stories/TEMPORARY'
-        # spec.link directory: './spec/TEMPORARY'
-        # spec.link directory: './spec/TEMPORARY2'
+        #spec.link directory: './spec/TEMPORARY'
+        spec.link directory: './spec/TEMPORARY2'
 

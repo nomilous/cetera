@@ -11,25 +11,6 @@ uuid:  '63e2d6b0-f242-11e2-85ef-03366e5fcf9a'
 
 realize: (it) -> #, ThePeriscope, should ) -> 
 
-    console.log "walking --> the_periscope_spec.coffee"
-
-    before each: (done) -> 
-
-        @created_on_realizer = 1
-        done()
-
-
-    it 'has deeper phrases', (that) -> 
-
-        console.log "walking --> deeper"
-
-        that 'confirms the recursor has spanned the boundry', (end) -> 
-
-            @confirmed = 1
-            end()
-
-
-
     require 'should'
 
                     #
