@@ -4,8 +4,7 @@ uuid:  '63e2d6b0-f242-11e2-85ef-03366e5fcf9a'
 #
 # TEMPORARY
 # 
-# ./objective
-# ./node_modules/nez/bin/realize -c spec/TEMPORARY/the_periscope_spec.coffee
+# touch spec/TEMPORARY/the_periscope_spec.coffee
 #
 
 
