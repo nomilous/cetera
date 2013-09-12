@@ -13,7 +13,6 @@ module.exports = class DevelopmentCache
         for script in scripts
 
             route = "/#{name}/#{script}"
-            console.log 'create route GET %s', route
 
             app.get route, (req, res) -> 
 
