@@ -13,7 +13,7 @@ require('nez').objective
     """
 
     listen: 
-        secret: '∫'
+        secret: 'π'
     #     address: 'localhost'
     #     port:     10001
     #     cert:     './cert/develop-cert.pem'
