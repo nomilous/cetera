@@ -30,6 +30,7 @@ realize: (it, ThePeriscope, should ) ->
     it 'can peek topside', (done) -> 
 
 
+        console.log RUNNING: 'the_periscope_spec'
 
         #
         # 1. Create expectations
