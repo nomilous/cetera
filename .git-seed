@@ -15,7 +15,7 @@
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/nez.git",
       "HEAD": "refs/heads/develop",
-      "version": "6a86c4c5c49f9fffe61fdc1e97f8c4411c9f34f7"
+      "version": "573ca66726a3fdf9f2c2736898d1eb52ebfdcd30"
     },
     {
       "root": false,
@@ -35,19 +35,19 @@
     },
     {
       "root": false,
-      "workDir": "./node_modules/nez/node_modules/notice",
-      "packageManager": "npm",
-      "remote.origin.url": "git@github.com:nomilous/notice.git",
-      "HEAD": "refs/heads/develop",
-      "version": "df547f201c53b7dab1d56cf5b65e4bd475d6f14b"
-    },
-    {
-      "root": false,
       "workDir": "./node_modules/nez/node_modules/phrase",
       "packageManager": "npm",
       "remote.origin.url": "git@github.com:nomilous/phrase.git",
       "HEAD": "refs/heads/develop",
       "version": "130fb2466d2e5d27c5788f6a23a753013bc4fd83"
+    },
+    {
+      "root": false,
+      "workDir": "./node_modules/nez/node_modules/realize",
+      "packageManager": "npm",
+      "remote.origin.url": "git@github.com:nomilous/realize.git",
+      "HEAD": "refs/heads/develop",
+      "version": "280920c4873096f455fc820a072a02d2b3ed57c8"
     }
   ]
 }
