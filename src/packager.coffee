@@ -1,4 +1,5 @@
 Development = require './cache/development_cache'
+Production = require './cache/production_cache'
 
 module.exports = class Packager
 

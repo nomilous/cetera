@@ -1,7 +1,7 @@
 {
   "name": "cetera",
   "description": "effortlessness, requirejs, packager, modules",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "author": "nomilous <nomilous@gmail.com",
   "contributors": [
     {
@@ -9,8 +9,7 @@
       "email": "nomilous@gmail.com"
     }
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "repository": "git@github.com:nomilous/cetera.git",
   "main": "./lib/cetera",
   "bin": {},
@@ -19,7 +18,7 @@
     "node": "*"
   },
   "devDependencies": {
-    "nez": "0.0.8",
-    "should": "~1.2.2"
+    "should": "~1.2.2",
+    "ipso": "0.0.22"
   }
 }
