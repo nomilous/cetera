@@ -1,7 +1,7 @@
 {
   "name": "cetera",
   "description": "effortlessness, requirejs, packager, modules",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "author": "nomilous <nomilous@gmail.com",
   "contributors": [
     {
@@ -10,7 +10,6 @@
     }
   ],
   "dependencies": {
-    "ipso": "0.0.22"
   },
   "repository": "git@github.com:nomilous/cetera.git",
   "main": "./lib/cetera",
