@@ -29,3 +29,4 @@ module.exports = class DevelopmentCache
 
                     return res.send( data ) unless err
                     res.statusCode = 404
+                    res.send()

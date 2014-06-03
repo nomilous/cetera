@@ -24,8 +24,7 @@ module.exports = class Packager
 
         if env == 'production'
 
-            #cache = new Production
-            cache = new Development
+            cache = new Production
             cache.route conf
 
         else
