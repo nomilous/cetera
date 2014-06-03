@@ -1,14 +1,14 @@
-### REALIZER 79528270-f242-11e2-85ef-03366e5fcf9a ###
+ipso = require 'ipso'
 
-require('nez').realize 'DevelopmentCache', (DevelopmentCache, test, it, should) -> 
+describe 'DevelopmentCache', -># (DevelopmentCache, test, it, should) -> 
 
-    it 'defines route()', (done) ->
+    it 'defines route()', ipso (done, DevelopmentCache) ->
 
         (new DevelopmentCache).route.should.be.an.instanceof Function
-        test done
+        done()
 
             
-    it 'assigns routes for specified scripts if app defines get()', (done) -> 
+    it 'assigns routes for specified scripts if app defines get()', ipso (done, DevelopmentCache) -> 
 
         paths = []
 
@@ -24,6 +24,6 @@ require('nez').realize 'DevelopmentCache', (DevelopmentCache, test, it, should) 
 
         paths[0].should.equal '/PACKAGENAME/directory/module.js'
         paths[1].should.equal '/PACKAGENAME/main.js'
-        test done
+        done()
 
 

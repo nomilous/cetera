@@ -9,7 +9,9 @@
       "email": "nomilous@gmail.com"
     }
   ],
-  "dependencies": {},
+  "dependencies": {
+    "ipso": "0.0.22"
+  },
   "repository": "git@github.com:nomilous/cetera.git",
   "main": "./lib/cetera",
   "bin": {},
@@ -18,7 +20,7 @@
     "node": "*"
   },
   "devDependencies": {
-    "nez": "0.0.8" ,
-    "should":  "~1.2.2"
+    "nez": "0.0.8",
+    "should": "~1.2.2"
   }
 }

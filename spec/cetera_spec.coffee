@@ -1,8 +1,8 @@
-### REALIZER 6bfe56d0-f242-11e2-85ef-03366e5fcf9a ###
+{ipso} = require 'ipso'
 
-require('nez').realize 'Cetera', (Cetera, test, it, Packager) -> 
+describe 'Cetera', ->
 
-    it 'exports Packager', (done) ->
+    it 'exports Packager', ipso (done, Cetera, Packager) ->
 
         Cetera.Packager.should.equal Packager
-        test done
+        done()
