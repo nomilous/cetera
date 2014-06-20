@@ -14,28 +14,30 @@ module.exports = class ProductionCache
 
         for script in scripts
 
-            route = "/#{name}/#{script}"
+            do (script) ->
 
-            app.get route, (req, res) ->
+                route = "/#{name}/#{script}"
 
-                res.header 'Content-Type': 'text/javascript'
+                app.get route, (req, res) ->
 
-                if cache[route]?
+                    res.header 'Content-Type': 'text/javascript'
 
-                    return res.send cache[route]
+                    if cache[route]?
 
-                match = req.path.match new RegExp "^\/#{name}\/(.*)"
-                file  = path.join src, match[1]
+                        return res.send cache[route]
 
-                fs.readFile file, (err, data) ->
+                    match = req.path.match new RegExp "^\/#{name}\/(.*)"
+                    file  = path.join src, match[1]
 
-                    unless err?
+                    fs.readFile file, (err, data) ->
 
-                        cache[route] = data
-                        return res.send( data )
+                        unless err?
 
-                    res.statusCode = 404
-                    res.send()
+                            cache[route] = data
+                            return res.send( data )
+
+                        res.statusCode = 404
+                        res.send()
 
 
 
