@@ -1,6 +1,7 @@
 Development = require './cache/development_cache'
 Production = require './cache/production_cache'
 
+
 module.exports = class Packager
 
     mount: (conf = {}) ->
@@ -26,10 +27,11 @@ module.exports = class Packager
         if env == 'production'
 
             cache = new Production
-            cache.route conf
+            tags  = cache.route conf
+            return tags
 
         else
 
             cache = new Development
-            cache.route conf
-
+            tags  = cache.route conf
+            return tags

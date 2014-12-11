@@ -3,7 +3,7 @@ cetera
 
 effortlessness, clientside, requirejs, package, modules
 
-### version 0.0.8 (high alpha)
+### version 0.0.9 (high alpha)
 
 
 usage
@@ -16,7 +16,7 @@ packager = new Packager
 
 app = express()
 
-packager.mount
+script_tags = packager.mount
 
     #
     # config.app as express app instance
@@ -29,19 +29,20 @@ packager.mount
     #
     # config.name as name of package
     #
-    # - results in script routes as /packagename/**/*.js
+    # - results in script routes as /packagename/**/*.js for the browser to access
     # 
 
     name: 'packagename'
 
     #
-    # config.src as source directory for scripts
+    # config.src as source directory for the js scripts
     #
 
     src: __dirname + '/lib/client'
 
     #
-    # scripts as array of scripts to serve
+    # scripts as array of scripts to serve, 
+    # path relative to 'src' as specified above
     # 
 
     scripts: [
@@ -51,6 +52,22 @@ packager.mount
       'submodule2/cetera.js'
     ]
 
+
+app.get '/index', (req, res) -> 
+
+    res.render 'index', 
+
+        title: 'www.newswords.org'
+        script_tags: script_tags
+
+
+```
+```html
+<html>
+    <head>
+        <%= script_tags %>
+    </head>
+    ...
 
 ```
 

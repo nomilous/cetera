@@ -14,7 +14,7 @@ module.exports = class DevelopmentCache
 
             route = "/#{name}/#{script}"
 
-            app.get route, (req, res) -> 
+            app.get route, (req, res) => 
 
                 match = req.path.match new RegExp "^\/#{name}\/(.*)"
                 file  = path.join src, match[1]
@@ -30,3 +30,9 @@ module.exports = class DevelopmentCache
                     return res.send( data ) unless err
                     res.statusCode = 404
                     res.send()
+
+        tags = for script in scripts
+
+            "<script src='/#{name}/#{script}' type='text/javascript'></script>\n"
+
+        return tags.join ''
