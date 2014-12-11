@@ -1,4 +1,4 @@
-{ipso} = require 'ipso'
+{ipso, original, mock} = require 'ipso'
 
 describe 'Packager', ->
 
@@ -46,7 +46,7 @@ describe 'Packager', ->
                     done()
 
                 (new Packager).mount
-                    src: __dirname + '../lib'
+                    src: __dirname + '/../lib'
                     name: 'PACKAGENAME'
                     scripts: [
                         'directory/module.js'
@@ -57,11 +57,11 @@ describe 'Packager', ->
 
         it 'can generate an array of script tags for non production mode',
 
-            ipso (DevelopmentCache, Packager) ->
+            ipso (Packager) ->
 
 
                 tags = (packager = new Packager).mount
-                    src: __dirname + '../lib'
+                    src: __dirname + '/../lib'
                     name: 'PACKAGENAME'
                     scripts: [
                         'directory/module.js'
@@ -69,19 +69,142 @@ describe 'Packager', ->
                     ]
                     app: get: (path, cb) ->
 
-                console.log tags.should.equal """
+                tags.should.equal """
                 <script src='/PACKAGENAME/directory/module.js' type='text/javascript'></script>
                 <script src='/PACKAGENAME/main.js' type='text/javascript'></script>
 
                 """
 
 
-        it 'generates a single script tag for prodction along with the concatenated minified scripts'
+        it 'generates a single script tag for prodction along with the concatenated minified scripts',
+
+            ipso (Packager, fs) ->
+
+                fs.does
+
+                    readFileSync: (filename) ->
+
+                        if filename.match /directory\/module.js/
+
+                            return """
+                            var fn = function() {
+
+                                var variable = 1;
+
+                            }
+
+                            """
+
+                        else if filename.match /main.js/
+
+                            return """
+                            var fn = function() {
+
+                                var variable = 1;
+
+                            }
+
+                            """
+
+                        original arguments
+
+                process.env.NODE_ENV = 'production'
+
+                tag = (packager = new Packager).mount
+                    src: __dirname + '/../lib'
+                    name: 'PACKAGENAME'
+                    scripts: [
+                        'directory/module.js'
+                        'main.js'
+                    ]
+                    version: '0.0.1'
+                    app: get: (path, cb) ->
+
+                tag.should.equal "<script src='/PACKAGENAME-0.0.1.min.js', type='text/javascript'></script>"
+
+                process.env.NODE_ENV = 'test'
+
+        it 'sets cache headers appropriately',
+
+            ipso (done, Packager, fs) ->
+
+                fs.does
+
+                    readFileSync: (filename) ->
+
+                        if filename.match /directory\/module.js/
+
+                            return """
+                            var fn = function() {
+
+                                var variable = 1;
+
+                            }
+
+                            """
+
+                        else if filename.match /main.js/
+
+                            return """
+                            var fn = function() {
+
+                                var variable = 1;
+
+                            }
+
+                            """
+
+                        original arguments
+
+                process.env.NODE_ENV = 'production'
+
+                packager = (new Packager).mount
+                    src: __dirname + '/../lib'
+                    name: 'PACKAGENAME'
+                    scripts: [
+                        'directory/module.js'
+                        'main.js'
+                    ]
+                    version: '0.0.1'
+                    app: get: (route, handler) ->
+
+                        headers = {}
+
+                        handler( 
+
+                            mock('req')
+
+                            mock('res').does
+
+                                header: (obj) ->
+
+                                    for key of obj
+
+                                        headers[key] = obj[key]
+
+                                send: (data) ->
+
+                                    headers.should.eql
+
+                                        'Content-Type': 'text/javascript'
+                                        
+
+                                    done()
+
+                        )
+
+                            
+
+                            
 
 
 
-        it 'puts the app version into the production script name'
+
+                process.env.NODE_ENV = 'test'
 
 
 
-        it 'sets cache headers appropriately'
+
+
+
+

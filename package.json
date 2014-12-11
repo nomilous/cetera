@@ -9,7 +9,12 @@
       "email": "nomilous@gmail.com"
     }
   ],
-  "dependencies": {},
+  "dependencies": {
+    "MD5": "^1.2.1",
+    "moment": "^2.8.4",
+    "moment-timezone": "^0.2.5",
+    "uglify-js": "^2.4.16"
+  },
   "repository": "git@github.com:nomilous/cetera.git",
   "main": "./lib/cetera",
   "bin": {},
