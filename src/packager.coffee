@@ -24,7 +24,7 @@ module.exports = class Packager
 
         env = process.env.NODE_ENV || process.env.ENV || 'development'
 
-        if env != 'production'
+        if env == 'production'
 
             cache = new Production
             tags  = cache.route conf
