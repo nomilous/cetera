@@ -64,11 +64,18 @@ module.exports = class ProductionCache
 
                 'Content-Length': concat_script.code.length
 
-                'Cache-Control': "max-age=#{cache_seconds}, must-revalidate"
+                'Cache-Control': "max-age=#{cache_seconds}" #, must-revalidate"
 
                 'Expires': moment( Date.now() + cache_seconds * 1000 ).tz('GMT').format 'ddd, DD MMM YYYY hh:mm:ss GMT'
 
                 'Last-Modified': cache_control['Last-Modified']
+
+                'ETag': cache_control.md5
+
+            if req.headers['if-none-match'] == cache_control.md5
+
+                res.sendStatus 304 # Not modified
+                return
 
             res.send ''
 
@@ -81,12 +88,18 @@ module.exports = class ProductionCache
 
                 'Content-Length': concat_script.code.length
 
-                'Cache-Control': "max-age=#{cache_seconds}, must-revalidate"
+                'Cache-Control': "max-age=#{cache_seconds}" #, must-revalidate"
 
                 'Expires': moment( Date.now() + cache_seconds * 1000 ).tz('GMT').format 'ddd, DD MMM YYYY hh:mm:ss GMT'
 
                 'Last-Modified': cache_control['Last-Modified']
 
+                'ETag': cache_control.md5
+
+            if req.headers['if-none-match'] == cache_control.md5
+
+                res.sendStatus 304 # Not modified
+                return
 
             res.send concat_script.code
 
