@@ -3,7 +3,7 @@ cetera
 
 effortlessness, clientside, requirejs, package, modules
 
-### version 0.0.11 (high alpha)
+### version 0.0.12 (high alpha)
 
 
 usage
