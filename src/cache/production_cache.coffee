@@ -18,7 +18,7 @@ module.exports = class ProductionCache
         cache_seconds = conf.cache_seconds || 86400
         version = conf.version || '0.0.0'
 
-        cache_control_file = __dirname + "/.#{name.cache_control}"
+        cache_control_file = __dirname + "/.#{name}.cache_control"
 
         concat_script_name = "/#{name}-#{version}.min.js"
 
